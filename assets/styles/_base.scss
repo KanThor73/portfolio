@@ -1,0 +1,40 @@
+@use "media-queries" as *;
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    font-family: var(--font);
+    color: var(--text);
+    font-size: 1.6rem;
+}
+
+p {
+    margin: 1rem 0;
+    font-family: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--text);
+    margin: 1rem 0 2rem 0;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+a{
+    color: var(--text);
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}

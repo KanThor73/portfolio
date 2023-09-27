@@ -1,0 +1,26 @@
+:root {
+  // font-family
+
+  --font: "Noto Sans", sans-serif;
+
+  // colors & gradiants
+
+  --background: #d1ccc0;
+  --dark: #101010;
+  --gray: #4f5250;
+  --light: #d2dae2;
+  --soft: #bc855b;
+  --hard: #654831;
+  --text: #e5e5e5;
+  --body: #fffaf2;
+  --gradiant: 90deg, var(--soft) 0%, var(--hard) 100%;
+  --gradiantgray: 259deg, var(--gray) 0%, var(--dark) 100%;
+  --gradiantgrid: 0deg, var(--gray) 10%, var(--dark) 100%, var(--gray) 10%;
+  --gradiantmenu: 180deg, var(--gray) 0%, var(--dark) 100%;
+
+  // shadows
+
+  --text_shadow: 0em 0em 0.4em rgba(255, 255, 255, 0.6);
+  --text_shadow_soft: 0em 0em 0.15em rgba(255, 255, 255, 0.6);
+  --text_shadow_dark: 0px 2px 18px 0px rgba(255, 255, 255, 0.3);
+}
