@@ -4,24 +4,24 @@
     @content;
   }
 }
-  
-  /* Landscape phone to portrait tablet */
+
+/* Landscape phone to portrait tablet */
 @mixin sm {
   @media (min-width: 480px) and (max-width: 767px) {
     @content;
   }
 }
-  
-  /* Portrait tablet to landscape and desktop */
+
+/* Portrait tablet to landscape and desktop */
 @mixin md {
   @media (min-width: 768px) and (max-width: 1199px) {
     @content;
   }
 }
-  
-  /* Large desktp */
+
+/* Large desktp */
 @mixin xl {
-  @media (min-width: 1200px) and (max-width: 1680px){
+  @media (min-width: 1200px) and (max-width: 1680px) {
     @content;
   }
 }
@@ -53,5 +53,3 @@
 //       @error;
 //   }
 // }
-
-// ajouter une fonction pour automatiser l'attribution de la mixin

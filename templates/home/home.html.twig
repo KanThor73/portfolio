@@ -2,6 +2,28 @@
 
 {% block title %}Hello HomeController!{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('home') }}
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('home') }}
+{% endblock %}
 {% block body %}
-<h1>Hello World</h1>
+    <div class="container">
+        <a href="{{ path('cv') }}">
+            <div class="content">
+                <img src="{{ asset('img/cv.jpg') }}" alt="cv_illustration">
+                <h2>Mon CV</h2>
+            </div>
+        </a>
+        <a href="{{ path('projects') }}">
+            <div class="content">
+                <img src="{{ asset('img/projects.jpg') }}" alt="projets_illustration">
+                <h2>Mes realisations</h2>
+            </div>
+        </a>
+    </div>
+    </div>
 {% endblock %}

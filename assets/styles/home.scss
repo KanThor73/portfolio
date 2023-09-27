@@ -1,3 +1,68 @@
-h1{
-    color: turquoise;
+@use "reset" as *;
+@use "base" as *;
+@use "classes" as *;
+@use "utils" as *;
+@use "animations" as *;
+@use "media-queries" as *;
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  @include xs{
+    flex-direction: column;
+  }
+  @include sm{
+    flex-direction: column;
+  }
+  @include md{
+    flex-direction: column;
+  }
+}
+
+img {
+  height: 100vh;
+  width: 100%;
+  opacity: 0.5;
+  object-fit: cover;
+  object-position: center center;
+  @include xs{
+    height: 50vh;
+    width: 100vw;
+  }
+  @include sm{
+    height: 50vh;
+    width: 100vw;
+  }
+  @include md{
+    height: 50vh;
+    width: 100vw;
+  }
+}
+
+.content {
+  position: relative;
+  h2 {
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    position: absolute;
+    color: var(--font);
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+}
+
+img{
+  transition: 0.3s ease-out;
+}
+
+img:hover{
+  opacity: 0.9;
 }
