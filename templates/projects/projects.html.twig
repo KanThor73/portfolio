@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProjectsController!{% endblock %}
+{% block title %}Réalisations{% endblock %}
 {% block stylesheets %}
     {{ parent() }}
 {% endblock %}
@@ -17,11 +17,13 @@
                         <div class="card-container">
                             <div class="card">
                                 <div class="card-back">
-                                    <h4>2023</h4>
-                                    <p>Réalisation d'un cv en ligne animé en css</p>
+                                    <a href="https://github.com/KanThor73/cv-online">
+                                        <h4>2023</h4>
+                                        <p>Réalisation d'un cv en ligne animé en css</p>
+                                    </a>
                                 </div>
                                 <div class="card-front">
-                                    <h5>Vous y êtes !</h5>
+                                    <h5>CV en ligne</h5>
                                 </div>
                             </div>
                         </div>
@@ -44,10 +46,12 @@
                         <div class="card-container">
                             <div class="card">
                                 <div class="card-back">
-                                    <h4>2023</h4>
-                                    <h4>ENI ECOLE INFORMATIQUE</h4>
-                                    <p>Développement d'un site d'enchères sous JAVA EE et SQL Server :application
-                                        web organisée en couches</p>
+                                    <a href="https://github.com/KanThor73/Projet-ench-re">
+                                        <h4>2023</h4>
+                                        <h4>ENI ECOLE INFORMATIQUE</h4>
+                                        <p>Développement d'un site d'enchères sous JAVA EE et MariaDB :application
+                                            web organisée en couches</p>
+                                    </a>
                                 </div>
                                 <div class="card-front">
                                     <h5>Projet enchères</h5>
@@ -59,10 +63,12 @@
                         <div class="card-container">
                             <div class="card">
                                 <div class="card-back">
-                                    <h4>2023</h4>
-                                    <h4>ENI ECOLE INFORMATIQUE</h4>
-                                    <p>Analyse, conception et développement d'un site d'organisation d'événements
-                                        d'entreprises avec PHP/Symfony Twig et MySQL</p>
+                                    <a href="https://github.com/KanThor73/eni-events">
+                                        <h4>2023</h4>
+                                        <h4>ENI ECOLE INFORMATIQUE</h4>
+                                        <p>Analyse, conception et développement d'un site d'organisation d'événements
+                                            d'entreprises avec PHP/Symfony Twig et MySQL</p>
+                                    </a>
                                 </div>
                                 <div class="card-front">
                                     <h5>Projet evenements</h5>
@@ -70,9 +76,25 @@
                             </div>
                         </div>
                     </article>
+                    <article class="center">
+                        <div class="card-container">
+                            <div class="card">
+                                <div class="card-back">
+                                    <a href="https://github.com/KanThor73/tp_bonus">
+                                        <h4>2023</h4>
+                                        <h4>ENI ECOLE INFORMATIQUE</h4>
+                                        <p>Développement d'une application de création
+                                            d'articles avec PHP/Symfony Twig et MySQL</p>
+                                    </a>
+                                </div>
+                                <div class="card-front">
+                                    <h5>Creation d'articles</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </main>
-
     </div>
 {% endblock %}
