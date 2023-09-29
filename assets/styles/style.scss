@@ -41,19 +41,21 @@ header {
   align-items: center;
   justify-content: center;
 
-  .profil{
+  .profil {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0rem 2rem;
     text-align: center;
-    h2{
+
+    h2 {
       font-size: 4rem;
       font-weight: 400;
       letter-spacing: 1.7rem;
       color: var(--light);
     }
   }
+
   img {
     filter: grayscale(100%);
     max-width: 20rem;
@@ -65,6 +67,7 @@ header {
       max-height: 9rem;
     }
   }
+
   h1 {
     font-size: 4.8rem;
     color: var(--soft);
@@ -78,17 +81,20 @@ header {
       padding-bottom: 1rem;
     }
   }
+
   p {
     font-size: 2.5rem;
     margin: 0.3rem 0 2rem 0.3rem;
     color: var(--text);
     letter-spacing: 0.3rem;
     text-align: center;
+
     span {
       font-style: italic;
       color: #ffb908;
       font-weight: 100;
     }
+
     @include xs {
       font-size: 0.8rem;
     }
@@ -97,48 +103,57 @@ header {
 
 // menu
 
-menu{
+menu {
   position: sticky;
   top: 0px;
   z-index: 1;
   background: linear-gradient(var(--gradiantgray));
-  p{
+
+  p {
     margin: 0.5rem 0rem;
   }
-  .langages-prog{
+
+  .langages-prog {
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--soft);
-    border-top:1px solid var(--soft);
-    background:var(--font-);
+    border-top: 1px solid var(--soft);
+    background: var(--font-);
     display: flex;
     justify-content: space-around;
-    .t{
+
+    .t {
       display: flex;
       flex-direction: column;
-      justify-content: center;  
+      justify-content: center;
       align-items: center;
     }
-    .fa-html5{
+
+    .fa-html5 {
       font-size: 3rem;
       color: red;
     }
-    .fa-css3-alt{
+
+    .fa-css3-alt {
       font-size: 3rem;
       color: blue;
     }
-    .fa-java{
+
+    .fa-java {
       font-size: 3rem;
       color: red
     }
-    .fa-square-js{
+
+    .fa-square-js {
       font-size: 3rem;
       color: yellow;
     }
-    .fa-php{
+
+    .fa-php {
       font-size: 3rem;
       color: blue;
     }
-    .fa-database{
+
+    .fa-database {
       font-size: 3rem;
       color: black;
     }
@@ -146,341 +161,382 @@ menu{
 }
 
 
-
-
 // main
 
-  main {
+main {
 
-    .media1{
-      display: grid;
-      grid-area: media1;
-      place-self: center;
-      place-content: center;
+  .media1 {
+    display: grid;
+    grid-area: media1;
+    place-self: center;
+    place-content: center;
+  }
+
+  .media2 {
+    display: grid;
+    grid-area: media2;
+    place-self: center;
+    place-content: center;
+  }
+
+  .media3 {
+    display: grid;
+    grid-area: media3;
+    place-self: center;
+    place-content: center;
+  }
+
+  article {
+    height: 20rem;
+    width: 30rem;
+    // box-shadow: 0px 1px 5px var(--light);
+    // padding: 10rem 2rem;
+    margin: 1rem;
+    flex: 1;
+  }
+
+  .center {
+    text-align: center;
+    padding: 0rem;
+    margin: 0rem;
+  }
+
+  padding: 2rem;
+
+  h3 {
+    color: var(--soft);
+    font-size: 4rem;
+    font-weight: 300;
+    margin-top: 1rem;
+    padding-top: 2rem;
+    text-shadow: 1px 1px 3px var(--dark);
+  }
+
+  h4 {
+    margin: 1rem;
+    padding-top: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--soft);
+    @include xs {
+      font-size: 1.2rem;
     }
-    .media2{
-      display: grid;
-      grid-area: media2;
-      place-self: center;
-      place-content: center;
+  }
+
+  h5 {
+    margin: auto 0;
+    padding-bottom: 1rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
+    @include xs {
+      font-size: 0.8rem;
+      padding-bottom: 0.7rem;
     }
-    .media3{
+  }
+
+  // experiences professionnelles
+
+  .expe-pro {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @include xl {
       display: grid;
-      grid-area: media3;
-      place-self: center;
-      place-content: center;
+      grid:
+        "media1 media2" auto
+        "media3 media3" auto
+        / 1fr 1fr;
+    }
+    @include md {
+      display: grid;
+      grid:
+        "media1" auto
+        "media2" auto
+        "media3" auto
+        / 1fr;
+    }
+    @include sm {
+      display: grid;
+      grid:
+        "media1" auto
+        "media2" auto
+        "media3" auto
+        / 1fr;
+    }
+    @include xs {
+      display: grid;
+      grid:
+        "media1" auto
+        "media2" auto
+        "media3" auto
+        / 1fr;
     }
 
-    article{
-      height: 20rem;
-      width: 30rem;
-      // box-shadow: 0px 1px 5px var(--light);
-      // padding: 10rem 2rem;
-      margin: 1rem;
-      flex: 1;
-    }
-    .center{
+
+    .tache {
       text-align: center;
-      padding: 0rem;
-      margin: 0rem;
     }
-    padding: 2rem;
-    h3{
-      color: var(--soft);
-      font-size: 4rem;
-      font-weight: 300;
-      margin-top: 1rem;
-      padding-top: 2rem;
-      text-shadow: 1px 1px 3px var(--dark);
+
+    h3 {
+      margin-left: 1rem;
     }
-    h4 {
-      margin: 1rem;
-      padding-top: 0;
-      font-size: 2rem;
-      font-weight: 700;
-      text-align: center;
-      color: var(--soft);
+
+    h6 {
+      margin-top: 0;
+      margin-bottom: 0rem;
+      padding: 0 0 1rem 0;
+      font-size: 1.8rem;
+      font-weight: 400;
       @include xs {
-        font-size: 1.2rem;
+        padding: 0 0 0.7rem 0;
+        margin-bottom: 0.8rem;
       }
     }
 
-    h5 {
-      margin: auto 0;
-      padding-bottom: 1rem;
-      font-size: 2.2rem;
-      font-weight: 600;
-      letter-spacing: 0.5rem;
+    p {
+      margin-top: 0;
+      padding: 0 0 2rem 0;
+      font-size: 1.7rem;
+      text-align: justify;
       @include xs {
         font-size: 0.8rem;
-        padding-bottom: 0.7rem;
-      }
-    }
-
-    // experiences professionnelles
-
-    .expe-pro{
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-
-      @include xl {
-        display: grid;
-        grid:
-        "media1 media2" auto
-        "media3 media3" auto
-        / 1fr 1fr ;
-      }
-      @include md {
-        display: grid;
-        grid:
-        "media1" auto
-        "media2" auto
-        "media3" auto
-        / 1fr;
-      }
-      @include sm {
-        display: grid;
-        grid:
-        "media1" auto
-        "media2" auto
-        "media3" auto
-        / 1fr;
-      }
-      @include xs {
-        display: grid;
-        grid:
-        "media1" auto
-        "media2" auto
-        "media3" auto
-        / 1fr;
-      }
-
-
-      .tache{
+        padding: 0 0 0.5rem 0;
         text-align: center;
-      }
-      h3{
-        margin-left: 1rem;
-      }
-      h6 {
-        margin-top: 0;
-        margin-bottom: 0rem;
-        padding: 0 0 1rem 0;
-        font-size: 1.8rem;
-        font-weight: 400;
-        @include xs {
-          padding: 0 0 0.7rem 0;
-          margin-bottom: 0.8rem;
-        }
-      }
-      p {
-        margin-top: 0;
-        padding: 0 0 2rem 0;
-        font-size: 1.7rem;
-        text-align: justify;
-        @include xs {
-          font-size: 0.8rem;
-          padding: 0 0 0.5rem 0;
-          text-align: center;
-        }
-      }
-    }
-
-    // Formations
-
-    .formations{
-      display: flex;
-      justify-content: space-around;
-      h5{
-        margin: 0rem;
-      }
-      h6{
-        font-size: 2rem;
-      }
-      @include xl {
-        display: grid;
-        grid:
-        "media1 media2" auto
-        "media3 media3" auto
-        / 1fr 1fr ;
-      }
-      @include md {
-        display: grid;
-        grid:
-        "media1" auto
-        "media2" auto
-        "media3" auto
-        / 1fr;
-      }
-      @include sm {
-        display: grid;
-        grid:
-        "media1" auto
-        "media2" auto
-        "media3" auto
-        / 1fr;
-      }
-      @include xs {
-        display: grid;
-        grid:
-        "media1" auto
-        "media2" auto
-        "media3" auto
-        / 1fr;
-      }
-   
-    }
-
-    // Projets
-    .projets{
-
-      display: flex;
-      justify-content: space-around;
-      text-align: center;
-      margin: 0rem;
-
-      @include xl {
-        display: grid;
-        grid:
-        "done" auto
-        "todo" auto
-        / 1fr;
-      }
-      @include md {
-        display: grid;
-        grid:
-        "done" auto
-        "todo" auto
-        / 1fr;
-      }
-      @include sm {
-        display: grid;
-        grid:
-        "done" auto
-        "todo" auto
-        / 1fr;
-        .project-package{
-          flex-direction: column;
-          align-items: center;
-        }
-        article{
-          margin: 5rem 0rem;
-        }
-
-      }
-      .sous-titre{
-        
-        padding-bottom: 6rem;
-      }
-      .done{
-        display: flex;
-        flex-direction: column;
-        grid-area: done;
-      }
-      .todo{
-        display: flex;
-        flex-direction: column;
-        grid-area: todo;
-      }
-      .project-package{
-        display: flex;
-        justify-content: space-between;
-        gap: 0rem 7rem;
-      }
-      article{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-
-    // Annexes
-
-    .annexes {
-      margin-top: 7rem;
-      display: flex;
-      justify-content: space-around;
-      @include md {
-        display: grid;
-        grid:
-        "media1 media2" auto
-        "media3 media3" auto
-        / 1fr 1fr ;
-        article{
-          margin: 3rem 0rem;
-        }
-      }
-      @include sm {
-        display: grid;
-        grid:
-        "media1 media2" auto
-        "media3 media3" auto
-        / 1fr 1fr ;
-        article{
-          margin: 3rem 0rem;
-        }
-      }
-
-      @include xs {
-        display: grid;
-        grid:
-        "media1 media2" auto
-        "media3 media3" auto
-        / 1fr 1fr ;
-        article{
-          margin: 3rem 0rem;
-        }
-      }
-      article{
-        box-shadow: none;
-      }
-      .fa-linkedin {
-        color: #0a66c2;
-        margin-right: 0.2rem;
-        font-size: 2.2rem;
-      }
-      
-      
-    }
-    .info-perso{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--soft);
-      border-radius: 7px;
-      margin: 0rem 6rem;
-      span{
-        color: var(--soft);
-        font-size: 2rem;
-      }
-      #village{
-        font-weight: 500;
-        color: var(--light);
-      }
-      .fa-phone{
-        text-shadow: var(--text_shadow);
-      }
-    }    
-    .langue{
-      .check {
-        color: var(--light);
-        padding-right: 0.5rem;
-        font-size: 2rem;
-        text-shadow: var(--text_shadow);
-      }
-      h2{
-        color: var(--soft);
-        margin-bottom: 5rem;
-      }
-    }
-    .hobbies{
-      h2{
-        color: var(--soft);
       }
     }
   }
+
+  // Formations
+
+  .formations {
+    display: flex;
+    justify-content: space-around;
+
+    h5 {
+      margin: 0rem;
+    }
+
+    h6 {
+      font-size: 2rem;
+    }
+
+    @include xl {
+      display: grid;
+      grid:
+        "media1 media2" auto
+        "media3 media3" auto
+        / 1fr 1fr;
+    }
+    @include md {
+      display: grid;
+      grid:
+        "media1" auto
+        "media2" auto
+        "media3" auto
+        / 1fr;
+    }
+    @include sm {
+      display: grid;
+      grid:
+        "media1" auto
+        "media2" auto
+        "media3" auto
+        / 1fr;
+    }
+    @include xs {
+      display: grid;
+      grid:
+        "media1" auto
+        "media2" auto
+        "media3" auto
+        / 1fr;
+    }
+
+  }
+
+  // Projets
+  .projets {
+
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 0rem;
+
+    @include xl {
+      display: grid;
+      grid:
+        "done" auto
+        "todo" auto
+        / 1fr;
+      .project-package {
+        flex-wrap: wrap;
+      }
+    }
+    @include md {
+      display: grid;
+      grid:
+        "done" auto
+        "todo" auto
+        / 1fr;
+      .project-package {
+        flex-wrap: wrap;
+      }
+    }
+    @include sm {
+      display: grid;
+      grid:
+        "done" auto
+        "todo" auto
+        / 1fr;
+      .project-package {
+        flex-wrap: wrap;
+      }
+      article {
+        margin: 5rem 0rem;
+      }
+    }
+    @include xs {
+      display: grid;
+      grid:
+        "done" auto
+        "todo" auto
+        / 1fr;
+      .project-package {
+        flex-wrap: wrap;
+      }
+      article {
+        margin: 5rem 0rem;
+      }
+    }
+
+    .sous-titre {
+
+      padding-bottom: 6rem;
+    }
+
+    .done {
+      display: flex;
+      flex-direction: column;
+      grid-area: done;
+    }
+
+    .todo {
+      display: flex;
+      flex-direction: column;
+      grid-area: todo;
+    }
+
+    .project-package {
+      display: flex;
+      justify-content: space-between;
+      gap: 0rem 7rem;
+    }
+
+    article {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  // Annexes
+
+  .annexes {
+    margin-top: 7rem;
+    display: flex;
+    justify-content: space-around;
+    @include md {
+      display: grid;
+      grid:
+        "media1 media2" auto
+        "media3 media3" auto
+        / 1fr 1fr;
+      article {
+        margin: 3rem 0rem;
+      }
+    }
+    @include sm {
+      display: grid;
+      grid:
+        "media1 media2" auto
+        "media3 media3" auto
+        / 1fr 1fr;
+      article {
+        margin: 3rem 0rem;
+      }
+    }
+
+    @include xs {
+      display: grid;
+      grid:
+        "media1 media2" auto
+        "media3 media3" auto
+        / 1fr 1fr;
+      article {
+        margin: 3rem 0rem;
+      }
+    }
+
+    article {
+      box-shadow: none;
+    }
+
+    .fa-linkedin {
+      color: #0a66c2;
+      margin-right: 0.2rem;
+      font-size: 2.2rem;
+    }
+
+
+  }
+
+  .info-perso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--soft);
+    border-radius: 7px;
+    margin: 0rem 6rem;
+
+    span {
+      color: var(--soft);
+      font-size: 2rem;
+    }
+
+    #village {
+      font-weight: 500;
+      color: var(--light);
+    }
+
+    .fa-phone {
+      text-shadow: var(--text_shadow);
+    }
+  }
+
+  .langue {
+    .check {
+      color: var(--light);
+      padding-right: 0.5rem;
+      font-size: 2rem;
+      text-shadow: var(--text_shadow);
+    }
+
+    h2 {
+      color: var(--soft);
+      margin-bottom: 5rem;
+    }
+  }
+
+  .hobbies {
+    h2 {
+      color: var(--soft);
+    }
+  }
+}
 
 
 // footer
@@ -488,12 +544,13 @@ menu{
 footer {
   padding-bottom: 2rem;
   @include sm {
-  
-    .id{
+
+    .id {
       display: flex;
       flex-direction: column;
     }
   }
+
   .contact-container {
     margin: 1.5rem 8rem;
     border: 1px solid var(--soft);
@@ -510,7 +567,7 @@ footer {
       "id" auto
       "message" auto
       / auto;
-      .contact{
+      .contact {
         margin: 2rem 4rem;
       }
     }
@@ -521,26 +578,27 @@ footer {
       "id" auto
       "message" auto
       / auto;
-      .contact{
+      .contact {
         margin: 2rem 2rem;
       }
 
     }
     @include xs {
-    grid:
+      grid:
       "contact" auto
       "id" auto
       "message" auto
       / auto;
-      .contact{
+      .contact {
         margin: 2rem 2rem;
         padding: 1rem;
       }
-      .contact-container{
+      .contact-container {
         margin: 2rem 4rem;
         padding: 1rem;
       }
     }
+
     .contact {
       grid-area: contact;
       display: flex;
@@ -548,6 +606,7 @@ footer {
       align-items: center;
       justify-content: center;
     }
+
     .id {
       grid-area: id;
       display: flex;
@@ -555,9 +614,11 @@ footer {
         flex-direction: column;
       }
     }
+
     .text {
       grid-area: message;
     }
+
     h2 {
       margin-top: 0;
       margin-bottom: 1rem;
@@ -571,6 +632,7 @@ footer {
         font-size: 3rem;
       }
     }
+
     button {
       box-shadow: var(--text_shadow);
       padding: 0.5rem;
@@ -586,12 +648,14 @@ footer {
         margin-bottom: 1rem;
       }
     }
+
     button:hover {
       transform: scale(1.1);
       color: rgba(255, 255, 255, 0.6);
       text-shadow: var(--text_shadow);
       background: var(--dark);
     }
+
     input {
       background: var(--text);
       border: none;
@@ -604,9 +668,11 @@ footer {
       background: var(--gradiant);
       color: var(--text);
       outline: none;
+
       ::placeholder {
         color: var(--text);
       }
+
       @include xs {
         margin: 1rem;
       }
@@ -614,6 +680,7 @@ footer {
         margin: 0.5rem;
       }
     }
+
     textarea {
       margin: 0.3rem 1rem 1rem 0.9rem;
       padding: 0.4rem 0.8rem;
