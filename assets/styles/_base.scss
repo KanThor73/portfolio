@@ -7,12 +7,14 @@ html {
 body{
     font-family: var(--font);
     color: var(--text);
+    background: var(--body);
     font-size: 1.6rem;
 }
 
 p {
     margin: 1rem 0;
-    font-family: var(--text);
+    font-family: var(--fontFamilyTitle);
+    color: var(--primary);
 }
 
 h1,
@@ -21,8 +23,14 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--text);
-    margin: 1rem 0 2rem 0;
+    font-family: var(--fontFamilyTitle);
+    color: var(--body);
+    }
+
+h1{
+    font-size: 4.5rem;
+    color: var(--body);
+    letter-spacing: 0.7rem;
 }
 
 ul{
@@ -35,6 +43,3 @@ a{
     text-decoration: none;
 }
 
-img{
-    max-width: 100%;
-}

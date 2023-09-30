@@ -5,699 +5,232 @@
 @use "animations" as *;
 @use "media-queries" as *;
 
-// general
-
-body {
-  padding: 3rem;
-  // background: linear-gradient(var(--gradiantgray));
-  background: linear-gradient(var(--gradiant));
-  @include xs {
-    padding: 0;
-  }
-  @include sm {
-    padding: 0;
-  }
-  @include md {
-    padding: 0;
-  }
-}
-
-.container {
-  background: linear-gradient(var(--gradiantgray));
-  box-shadow: 0px 1px 5px var(--dark);
-}
-
-.text {
-  color: var(--light);
-}
-
-
-// header
+//header
 
 header {
-  grid-area: header;
+  width: 100%;
+  padding: 1rem;
   display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  position: fixed;
+  z-index: 1;
 
-  .profil {
+
+  .header-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 0rem 2rem;
-    text-align: center;
+    width: 75vw;
+  }
 
-    h2 {
-      font-size: 4rem;
-      font-weight: 400;
-      letter-spacing: 1.7rem;
-      color: var(--light);
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    height: 7rem;
+    width: 7rem;
+  }
+
+  nav {
+    border: 1px solid var(--secondary);
+    padding: 1rem;
+    margin-right: 2rem;
+    border-radius: 2px;
+    display: flex;
+    column-gap: 1.5rem;
+    background-color: var(--primary);
+    box-shadow: var(--box-shadow);
+
+    h3 {
+      color: var(--secondary);
+    }
+
+    .separator {
+      margin: 0.5rem 0;
+      height: inherit;
+      width: 1px;
+      border-right: 1px solid var(--secondary);
+    }
+  }
+}
+
+//show
+
+.show {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("../img/show.jpg") center center;
+  background-size: cover;
+}
+
+.show::after {
+  position: absolute;
+  background: url("../img/mountains.svg") no-repeat;
+  background-size: cover;
+  height: 15vh;
+  width: 100%;
+  left: 0;
+  bottom: -3px;
+  content: "";
+}
+
+//travel
+
+.travel {
+  background: var(--secondary);
+  padding: 2rem 4rem;
+}
+
+.travel-container {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 2rem;
+
+  .text {
+    padding: 2rem 2rem;
+
+    p {
+      font-family: var(--fontFamilyCore);
     }
   }
 
   img {
-    filter: grayscale(100%);
-    max-width: 20rem;
-    max-height: 20rem;
-    margin-top: 1rem;
-    padding-top: 1.4rem;
-    @include xs {
-      max-widt: 12rem;
-      max-height: 9rem;
-    }
-  }
-
-  h1 {
-    font-size: 4.8rem;
-    color: var(--soft);
-    margin-bottom: 0;
-    font-weight: 300;
-    letter-spacing: 0.8rem;
-    animation: title 3s ease-in;
-    text-align: center;
-    @include xs {
-      font-size: 1.6rem;
-      padding-bottom: 1rem;
-    }
-  }
-
-  p {
-    font-size: 2.5rem;
-    margin: 0.3rem 0 2rem 0.3rem;
-    color: var(--text);
-    letter-spacing: 0.3rem;
-    text-align: center;
-
-    span {
-      font-style: italic;
-      color: #ffb908;
-      font-weight: 100;
-    }
-
-    @include xs {
-      font-size: 0.8rem;
-    }
-  }
-}
-
-// menu
-
-menu {
-  position: sticky;
-  top: 0px;
-  z-index: 1;
-  background: linear-gradient(var(--gradiantgray));
-
-  p {
-    margin: 0.5rem 0rem;
-  }
-
-  .langages-prog {
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--soft);
-    border-top: 1px solid var(--soft);
-    background: var(--font-);
-    display: flex;
-    justify-content: space-around;
-
-    .t {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .fa-html5 {
-      font-size: 3rem;
-      color: red;
-    }
-
-    .fa-css3-alt {
-      font-size: 3rem;
-      color: blue;
-    }
-
-    .fa-java {
-      font-size: 3rem;
-      color: red
-    }
-
-    .fa-square-js {
-      font-size: 3rem;
-      color: yellow;
-    }
-
-    .fa-php {
-      font-size: 3rem;
-      color: blue;
-    }
-
-    .fa-database {
-      font-size: 3rem;
-      color: black;
-    }
-  }
-}
-
-
-// main
-
-main {
-
-  .media1 {
-    display: grid;
-    grid-area: media1;
-    place-self: center;
-    place-content: center;
-  }
-
-  .media2 {
-    display: grid;
-    grid-area: media2;
-    place-self: center;
-    place-content: center;
-  }
-
-  .media3 {
-    display: grid;
-    grid-area: media3;
-    place-self: center;
-    place-content: center;
-  }
-
-  article {
-    height: 20rem;
+    padding: 2rem 2rem;
     width: 30rem;
-    // box-shadow: 0px 1px 5px var(--light);
-    // padding: 10rem 2rem;
-    margin: 1rem;
-    flex: 1;
+    height: 100%;
+    border-radius: 2px;
+  }
+}
+
+//skills
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 4rem;
+  height: 90vh;
+
+  h2 {
+    color: var(--secondary);
   }
 
-  .center {
-    text-align: center;
-    padding: 0rem;
-    margin: 0rem;
-  }
-
-  padding: 2rem;
-
-  h3 {
-    color: var(--soft);
-    font-size: 4rem;
-    font-weight: 300;
-    margin-top: 1rem;
-    padding-top: 2rem;
-    text-shadow: 1px 1px 3px var(--dark);
-  }
-
-  h4 {
-    margin: 1rem;
-    padding-top: 0;
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: center;
-    color: var(--soft);
-    @include xs {
-      font-size: 1.2rem;
-    }
-  }
-
-  h5 {
-    margin: auto 0;
-    padding-bottom: 1rem;
-    font-size: 2.2rem;
-    font-weight: 600;
-    letter-spacing: 0.5rem;
-    @include xs {
-      font-size: 0.8rem;
-      padding-bottom: 0.7rem;
-    }
-  }
-
-  // experiences professionnelles
-
-  .expe-pro {
+  .skills-container {
     display: flex;
-    justify-content: space-around;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
-
-    @include xl {
-      display: grid;
-      grid:
-        "media1 media2" auto
-        "media3 media3" auto
-        / 1fr 1fr;
-    }
-    @include md {
-      display: grid;
-      grid:
-        "media1" auto
-        "media2" auto
-        "media3" auto
-        / 1fr;
-    }
-    @include sm {
-      display: grid;
-      grid:
-        "media1" auto
-        "media2" auto
-        "media3" auto
-        / 1fr;
-    }
-    @include xs {
-      display: grid;
-      grid:
-        "media1" auto
-        "media2" auto
-        "media3" auto
-        / 1fr;
-    }
-
-
-    .tache {
-      text-align: center;
-    }
-
-    h3 {
-      margin-left: 1rem;
-    }
-
-    h6 {
-      margin-top: 0;
-      margin-bottom: 0rem;
-      padding: 0 0 1rem 0;
-      font-size: 1.8rem;
-      font-weight: 400;
-      @include xs {
-        padding: 0 0 0.7rem 0;
-        margin-bottom: 0.8rem;
-      }
-    }
-
-    p {
-      margin-top: 0;
-      padding: 0 0 2rem 0;
-      font-size: 1.7rem;
-      text-align: justify;
-      @include xs {
-        font-size: 0.8rem;
-        padding: 0 0 0.5rem 0;
-        text-align: center;
-      }
-    }
   }
 
-  // Formations
+  .sticks {
+    //background: #EA2027;
+    flex: 2;
+    padding-left: 3rem;
 
-  .formations {
-    display: flex;
-    justify-content: space-around;
+    h4 {
+      color: var(--primary);
+      margin: 1rem 0;
+      text-align: center;
+      font-family: var(--fontFamilyCore);
+    }
 
     h5 {
-      margin: 0rem;
-    }
-
-    h6 {
-      font-size: 2rem;
-    }
-
-    @include xl {
-      display: grid;
-      grid:
-        "media1 media2" auto
-        "media3 media3" auto
-        / 1fr 1fr;
-    }
-    @include md {
-      display: grid;
-      grid:
-        "media1" auto
-        "media2" auto
-        "media3" auto
-        / 1fr;
-    }
-    @include sm {
-      display: grid;
-      grid:
-        "media1" auto
-        "media2" auto
-        "media3" auto
-        / 1fr;
-    }
-    @include xs {
-      display: grid;
-      grid:
-        "media1" auto
-        "media2" auto
-        "media3" auto
-        / 1fr;
-    }
-
-  }
-
-  // Projets
-  .projets {
-
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    margin: 0rem;
-
-    @include xl {
-      display: grid;
-      grid:
-        "done" auto
-        "todo" auto
-        / 1fr;
-      .project-package {
-        flex-wrap: wrap;
-      }
-    }
-    @include md {
-      display: grid;
-      grid:
-        "done" auto
-        "todo" auto
-        / 1fr;
-      .project-package {
-        flex-wrap: wrap;
-      }
-    }
-    @include sm {
-      display: grid;
-      grid:
-        "done" auto
-        "todo" auto
-        / 1fr;
-      .project-package {
-        flex-wrap: wrap;
-      }
-      article {
-        margin: 5rem 0rem;
-      }
-    }
-    @include xs {
-      display: grid;
-      grid:
-        "done" auto
-        "todo" auto
-        / 1fr;
-      .project-package {
-        flex-wrap: wrap;
-      }
-      article {
-        margin: 5rem 0rem;
-      }
-    }
-
-    .sous-titre {
-
-      padding-bottom: 6rem;
-    }
-
-    .done {
-      display: flex;
-      flex-direction: column;
-      grid-area: done;
-    }
-
-    .todo {
-      display: flex;
-      flex-direction: column;
-      grid-area: todo;
-    }
-
-    .project-package {
-      display: flex;
-      justify-content: space-between;
-      gap: 0rem 7rem;
-    }
-
-    article {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      color: var(--dark);
+      font-family: var(--fontFamilyCore);
+      font-size: 1rem;
     }
   }
 
-  // Annexes
-
-  .annexes {
-    margin-top: 7rem;
-    display: flex;
-    justify-content: space-around;
-    @include md {
-      display: grid;
-      grid:
-        "media1 media2" auto
-        "media3 media3" auto
-        / 1fr 1fr;
-      article {
-        margin: 3rem 0rem;
-      }
-    }
-    @include sm {
-      display: grid;
-      grid:
-        "media1 media2" auto
-        "media3 media3" auto
-        / 1fr 1fr;
-      article {
-        margin: 3rem 0rem;
-      }
-    }
-
-    @include xs {
-      display: grid;
-      grid:
-        "media1 media2" auto
-        "media3 media3" auto
-        / 1fr 1fr;
-      article {
-        margin: 3rem 0rem;
-      }
-    }
-
-    article {
-      box-shadow: none;
-    }
-
-    .fa-linkedin {
-      color: #0a66c2;
-      margin-right: 0.2rem;
-      font-size: 2.2rem;
-    }
-
-
+  img {
+    margin: 0.5rem 3rem;
+    flex: 1;
+    height: 40rem;
+    box-shadow: var(--box-shadow);
   }
 
-  .info-perso {
+  .cv {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    border: 1px solid var(--soft);
-    border-radius: 7px;
-    margin: 0rem 6rem;
+  }
+}
 
-    span {
-      color: var(--soft);
-      font-size: 2rem;
+.prog {
+  position: relative;
+  margin: 0.5rem;
+  height: 0.3rem;
+  background: var(--primary-light);
+
+  .dark-bar {
+    position: absolute;
+    height: 0.3rem;
+    top: 0;
+    left: 0;
+    width: 60%;
+    background: var(--secondary);
+    box-shadow: 0 1px 2.5px var(--dark);
+  }
+
+  .dot {
+    position: absolute;
+    height: 0.8rem;
+    width: 0.8rem;
+    background: var(--dark);
+    left: calc(60% - 0.3rem);
+    top: -0.25rem;
+    transform: rotate(45deg);
+    box-shadow: 1px 1px 2.5px var(--dark);
+  }
+
+  &-40 {
+    .dark-bar {
+      width: 40%;
     }
 
-    #village {
-      font-weight: 500;
-      color: var(--light);
-    }
-
-    .fa-phone {
-      text-shadow: var(--text_shadow);
+    .dot {
+      left: calc(40% - 0.3rem);
     }
   }
 
-  .langue {
-    .check {
-      color: var(--light);
-      padding-right: 0.5rem;
-      font-size: 2rem;
-      text-shadow: var(--text_shadow);
+  &-55 {
+    .dark-bar {
+      width: 55%;
     }
 
-    h2 {
-      color: var(--soft);
-      margin-bottom: 5rem;
+    .dot {
+      left: calc(55% - 0.3rem);
     }
   }
 
-  .hobbies {
-    h2 {
-      color: var(--soft);
+  &-70 {
+    .dark-bar {
+      width: 70%;
+    }
+
+    .dot {
+      left: calc(70% - 0.3rem);
+    }
+  }
+
+  &-90 {
+    .dark-bar {
+      width: 90%;
+    }
+
+    .dot {
+      left: calc(90% - 0.3rem);
     }
   }
 }
 
+//portfolio
 
-// footer
-
-footer {
-  padding-bottom: 2rem;
-  @include sm {
-
-    .id {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
-  .contact-container {
-    margin: 1.5rem 8rem;
-    border: 1px solid var(--soft);
-    border-radius: 5px;
-    display: grid;
-    padding: 0.5rem 2rem;
-    grid:
-      "contact id" 0.2fr
-      "contact message" 1fr
-      / 0.5fr 1fr;
-    @include md {
-      grid:
-      "contact" auto
-      "id" auto
-      "message" auto
-      / auto;
-      .contact {
-        margin: 2rem 4rem;
-      }
-    }
-
-    @include sm {
-      grid:
-      "contact" auto
-      "id" auto
-      "message" auto
-      / auto;
-      .contact {
-        margin: 2rem 2rem;
-      }
-
-    }
-    @include xs {
-      grid:
-      "contact" auto
-      "id" auto
-      "message" auto
-      / auto;
-      .contact {
-        margin: 2rem 2rem;
-        padding: 1rem;
-      }
-      .contact-container {
-        margin: 2rem 4rem;
-        padding: 1rem;
-      }
-    }
-
-    .contact {
-      grid-area: contact;
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .id {
-      grid-area: id;
-      display: flex;
-      @include xs {
-        flex-direction: column;
-      }
-    }
-
-    .text {
-      grid-area: message;
-    }
-
-    h2 {
-      margin-top: 0;
-      margin-bottom: 1rem;
-      color: var(--soft);
-      font-size: 3.2rem;
-      font-weight: 300;
-      @include xs {
-        font-size: 2.2rem;
-      }
-      @include md {
-        font-size: 3rem;
-      }
-    }
-
-    button {
-      box-shadow: var(--text_shadow);
-      padding: 0.5rem;
-      margin-left: 1.5rem;
-      border-radius: 3px;
-      border: none;
-      transition: all 0.2s;
-      font-size: 1.2;
-      cursor: pointer;
-      transition: all 0.3s ease-in;
-      @include xs {
-        margin-left: 0rem;
-        margin-bottom: 1rem;
-      }
-    }
-
-    button:hover {
-      transform: scale(1.1);
-      color: rgba(255, 255, 255, 0.6);
-      text-shadow: var(--text_shadow);
-      background: var(--dark);
-    }
-
-    input {
-      background: var(--text);
-      border: none;
-      padding: 0.4rem 0.8rem;
-      flex: 1;
-      margin: 1rem;
-      font-family: var(--font);
-      border: 1px solid var(--soft);
-      border-radius: 3px;
-      background: var(--gradiant);
-      color: var(--text);
-      outline: none;
-
-      ::placeholder {
-        color: var(--text);
-      }
-
-      @include xs {
-        margin: 1rem;
-      }
-      @include md {
-        margin: 0.5rem;
-      }
-    }
-
-    textarea {
-      margin: 0.3rem 1rem 1rem 0.9rem;
-      padding: 0.4rem 0.8rem;
-      border: none;
-      font-family: var(--font);
-      border-radius: 3px;
-      background: var(--gradiant);
-      outline: none;
-      color: var(--text);
-      max-height: 5rem;
-      border: 1px solid var(--soft);
-      @include xs {
-        margin: 1rem;
-      }
-      @include md {
-        margin: 0.5rem;
-      }
-    }
-  }
-}

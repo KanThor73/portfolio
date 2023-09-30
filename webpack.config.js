@@ -20,7 +20,6 @@ Encore
      * Each entry will result in one JavaScript file (e.g. app.js)
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
-    .addEntry('home', './assets/home.js')
     .addEntry('cv', './assets/cv_style.js')
     .addEntry('variables', './assets/variables.js')
 

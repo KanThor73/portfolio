@@ -1,29 +1,153 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Thibault JACQUET | Développeur WEB{% endblock %}
 
-{% block stylesheets %}
-    {{ parent() }}
-    {{ encore_entry_link_tags('home') }}
+
+{% block body %}
+    <header>
+        <div class="header-content">
+            <img id="profile_picture" src="{{ asset('img/profil_picture.png') }}" alt="profil_picture">
+            <nav>
+                <a href="#show" onclick="scrollToSection('show'); return false;" class="frame"><h3>Acceuil</h3></a>
+                <a href="#travel" onclick="scrollToSection('travel'); return false;"><h3>Parcours</h3></a>
+                <div class="separator"></div>
+                <a href="#skills" onclick="scrollToSection('skills'); return false;"><h3>Skills</h3></a>
+                <div class="separator"></div>
+                <a href=""><h3>Portfolio</h3></a>
+                <div class="separator"></div>
+                <a href=""><h3>Contact</h3></a>
+            </nav>
+        </div>
+    </header>
+    <section class="show" id="show">
+        <h1>Thibault JACQUET</h1>
+        <h2>DEVELOPPEUR WEB - WEB MOBILE</h2>
+    </section>
+    <div class="travel" id="travel">
+        <h2>Mon parcours</h2>
+        <div class="travel-container">
+            <img src="{{ asset('img/travel_picture.jpg') }}" alt="travel_picture">
+            <div class="text">
+                <p>Un parcours assez atypique mais riche en experiences !</p>
+                <p>Ma passion pour le sport, la résolution de problèmes et les technologies du numérique m'a menée en
+                    licence
+                    d’ergonomie. J'y ai découvert la motion capture et la programmation scientifique.</p>
+                <p> Après plusieurs années dans le commerce, c'est cet appétit pour la résolution de problèmes qui m’a
+                    poussé vers le développement. Dans le cadre d'une reconversion professionnelle, je suis le cursus
+                    menant au diplôme de Développeur Web et Web mobile.</p>
+            </div>
+        </div>
+    </div>
+    <div class="skills" id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="sticks">
+                <H4>BACK-END</H4>
+                <h5>PHP</h5>
+                <div class="prog prog-55">
+                    <div class="dark-bar"></div>
+                    <div class="dot"></div>
+                </div>
+                <h5>SYMFONY</h5>
+                <div class="prog prog-70">
+                    <div class="dark-bar"></div>
+                    <div class="dot"></div>
+                </div>
+                <h5>JAVA</h5>
+                <div class="prog prog-55">
+                    <div class="dark-bar"></div>
+                    <div class="dot"></div>
+                </div>
+                <h5>MYSQL</h5>
+                <div class="prog prog-40">
+                    <div class="dark-bar"></div>
+                    <div class="dot"></div>
+                </div>
+                <h4>FRONT-END</h4>
+                <h5>HTML</h5>
+                <div class="prog prog-70">
+                    <div class="dark-bar"></div>
+                    <div class="dot"></div>
+                </div>
+                <h5>CSS</h5>
+                <div class="prog prog-70">
+                    <div class="dark-bar"></div>
+                    <div class="dot"></div>
+                </div>
+                <h5>JAVASCRIPT</h5>
+                <div class="prog prog-55">
+                    <div class="dark-bar"></div>
+                    <div class="dot"></div>
+                </div>
+                <h4>TOOLS</h4>
+                <h5>VSCODE</h5>
+                <div class="prog prog-70">
+                    <div class="dark-bar"></div>
+                    <div class="dot"></div>
+                </div>
+                <h5>PHP STORM</h5>
+                <div class="prog prog-70">
+                    <div class="dark-bar"></div>
+                    <div class="dot"></div>
+                </div>
+                <h5>ECLIPSE</h5>
+                <div class="prog prog-55">
+                    <div class="dark-bar"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <div class="cv">
+                <img src="{{ asset('img/thibault_jacquet.png') }}" alt="cv">
+            </div>
+        </div>
+    </div>
+    <div class="portfolio">
+        <h2>Portfolio</h2>
+        <h3>Quelques projets personnels et realisations</h3>
+        <div class="achievements">
+            <div class="project">
+                <div class="illustration"></div>
+                <h5>Portfolio</h5>
+            </div>
+            <div class="project">
+                <div class="illustration"></div>
+                <h5>Cv en ligne</h5>
+            </div>
+            <div class="project">
+                <div class="illustration"></div>
+                <h5>Projet evenement</h5>
+            </div>
+            <div class="project">
+                <div class="illustration"></div>
+                <h5>Projet enchere</h5>
+            </div>
+            <div class="project">
+                <div class="illustration"></div>
+                <h5>Projet article</h5>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 {% block javascripts %}
     {{ parent() }}
-    {{ encore_entry_script_tags('home') }}
-{% endblock %}
-{% block body %}
-    <div class="container">
-        <a href="{{ path('cv') }}">
-            <div class="content">
-                <img src="{{ asset('img/cv.jpg') }}" alt="cv_illustration">
-                <h2>Mon CV</h2>
-            </div>
-        </a>
-        <a href="{{ path('projects') }}">
-            <div class="content">
-                <img src="{{ asset('img/projects.jpg') }}" alt="projets_illustration">
-                <h2>Mes realisations</h2>
-            </div>
-        </a>
-    </div>
-    </div>
+    <script>
+        function scrollToSection(id) {
+            let section = document.getElementById(id);
+            section.scrollIntoView({behavior: "smooth"});
+        }
+
+        document.addEventListener('scroll', function () {
+            let header = document.getElementsByClassName('header-content')[0];
+            let profilePicture = document.getElementById('profile_picture');
+            console.log(header);
+
+            if (window.scrollY > 50) {
+                profilePicture.style.display = 'none';
+                header.style.justifyContent = 'center';
+            } else {
+                profilePicture.style.display = 'block';
+                header.style.justifyContent = 'space-between';
+            }
+        });
+    </script>
 {% endblock %}
