@@ -6,6 +6,11 @@
 @use "media-queries" as *;
 
 //header
+h2 {
+  i {
+    margin-right: 0.8rem;
+  }
+}
 
 header {
   width: 100%;
@@ -29,13 +34,15 @@ header {
     display: flex;
     align-items: center;
 
-    h3{
+    h3 {
       transition: 0.5s;
     }
+
     h3:hover {
-     scale: 1.1;
+      scale: 1.1;
     }
   }
+
   img {
     height: 8.5rem;
     width: 8.5rem;
@@ -117,6 +124,7 @@ header {
 
     p {
       font-family: var(--fontFamilyCore);
+      text-align: justify;
     }
   }
 
@@ -129,6 +137,41 @@ header {
   }
 }
 
+//add
+
+.add_band {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  padding: 4rem 0;
+
+  i {
+    color: var(--secondary);
+  }
+
+  .items {
+    h3 {
+      border: 1px solid var(--secondary);
+      border-radius: 2px;
+      padding: 1rem;
+    }
+
+    i {
+      color: var(--secondary);
+      margin-right: 1rem;
+    }
+
+    display: flex;
+    justify-content: center;
+  }
+
+  h3 {
+    margin: 2rem 3rem;
+  }
+}
+
 //skills
 
 .skills {
@@ -137,10 +180,15 @@ header {
   flex-direction: column;
   justify-content: center;
   padding: 2rem 4rem;
-  height: 100vh;
 
   h2 {
     color: var(--primary);
+  }
+
+  h3 {
+    text-align: center;
+    color: var(--primary);
+    margin: 3rem 0;
   }
 
   .skills-container {
@@ -395,7 +443,7 @@ header {
   }
 }
 
-.skills::after{
+.skills::after {
   position: absolute;
   background: url("../img/before_blue.svg") no-repeat;
   background-size: cover;
@@ -404,6 +452,18 @@ header {
   left: 0;
   bottom: -3px;
   content: "";
+}
+
+//precontact
+
+.pre-contact {
+  background-color: var(--secondary);
+  padding: 3rem;
+
+  h3 {
+    color: var(--primary);
+    text-align: center;
+  }
 }
 
 // contact
@@ -452,7 +512,7 @@ header {
     padding: 2rem 0;
     width: 100%;
     color: var(--dark);
-
+    text-align: center;
 
     label {
       font-size: 1.5rem;
@@ -480,6 +540,10 @@ header {
       justify-content: center;
       width: inherit;
       margin-top: 3rem;
+
+      i {
+        margin-left: 0.6rem;
+      }
 
       .btn-primary {
         font-weight: 600;
@@ -512,6 +576,7 @@ header {
         font-family: var(--fontFamilyCore);
         color: var(--dark);
       }
+
       textarea {
         width: 100%;
         border: none;
@@ -537,5 +602,32 @@ header {
     border: 1px solid var(--secondary);
     background-color: var(--primary-light);
     box-shadow: var(--box-shadow);
+  }
+
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+  margin-top: 2rem;
+  background-color: var(--secondary);
+
+  i {
+    margin-right: 1rem;
+    font-size: 2rem;
+    color: var(--body);
+  }
+
+  h4 {
+    font-family: var(--fontFamilyCore);
+  }
+
+  strong {
+    margin-left: 1rem;
+    font-family: var(--fontFamilyCore);
+    color: var(--primary);
+    font-size: 1.7rem;
   }
 }

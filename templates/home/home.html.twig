@@ -24,22 +24,32 @@
         <h2>DEVELOPPEUR WEB - WEB MOBILE</h2>
     </section>
     <div class="travel" id="travel">
-        <h2>Mon parcours</h2>
-        <h3>Un parcours assez atypique mais riche en experiences !</h3>
+        <h2><i class="fa-solid fa-road"></i>Mon parcours</h2>
         <div class="travel-container">
             <img src="{{ asset('img/travel_picture.jpg') }}" alt="travel_picture">
             <div class="text">
-                <p>Ma passion pour le sport, la résolution de problèmes et les technologies du numérique m'a menée en
-                    licence
-                    d’ergonomie. J'y ai découvert la motion capture et la programmation scientifique.</p>
+                <h3>Un parcours assez atypique mais riche en experiences !</h3>
+                <p>Ma passion pour le sport, la résolution de problèmes et les technologies du numérique m'ont d'abord
+                    menées en
+                    licence d’ergonomie. J'y ai découvert la motion capture et la programmation scientifique.</p>
                 <p> Après plusieurs années dans le commerce, c'est cet appétit pour la résolution de problèmes qui m’a
-                    poussé vers le développement. Dans le cadre d'une reconversion professionnelle, je suis le cursus
-                    menant au diplôme de Développeur Web et Web mobile.</p>
+                    poussé à découvrir le développement web. Suite à mes premiers projets j'ai alors décidé de
+                    faire de cette nouvelle passion ma reconversion.</p>
             </div>
         </div>
     </div>
+    <div class="add_band">
+        <h2>Au <i class="fa-solid fa-heart"></i> de mes préocupations</h2>
+        <div class="items">
+            <h3><i class="fa-solid fa-shuffle"></i>AGILE</h3>
+            <h3><i class="fa-solid fa-jet-fighter"></i>REACTIF</h3>
+            <h3><i class="fa-solid fa-bezier-curve"></i>FLEXIBLE</h3>
+        </div>
+    </div>
     <div class="skills" id="skills">
-        <h2>Skills</h2>
+        <h2><i class="fa-solid fa-screwdriver-wrench"></i>Skills</h2>
+        <h3>Afin de me rendre polyvalent et adaptable à tous vos projets, ma formation m’a permis d’approcher toutes les
+            facettes du développement WEB : </h3>
         <div class="skills-container">
             <div class="sticks">
                 <H4>BACK-END</H4>
@@ -118,7 +128,7 @@
         </div>
     </div>
     <div class="portfolio" id="portfolio">
-        <h2>Portfolio</h2>
+        <h2><i class="fa-regular fa-image"></i>Portfolio</h2>
         <div class="portfolio-container">
             <h3>Quelques-unes de mes realisations</h3>
             <div class="projects">
@@ -198,8 +208,12 @@
             </div>
         </div>
     </div>
+    <div class="pre-contact">
+        <h3>Vous recherchez un collaborateur impliqué, curieux et dynamique pour qui chaque nouveau projet est la
+            promesse d'acquérir de nouvelles compétences ?</h3>
+    </div>
     <div class="contact" id="contact">
-        <h2>Contact</h2>
+        <h2><i class="fa-regular fa-envelope"></i>Contact</h2>
         <div class="contact-container">
             <div class="form">
                 <h3>Formulaire de contact</h3>
@@ -234,7 +248,7 @@
                 </div>
                 {{ form_errors(form.message) }}
                 <div class="btn">
-                    <button class="btn-primary" type="submit">Envoyer</button>
+                    <button class="btn-primary" type="submit">Envoyer<i class="fa-regular fa-paper-plane"></i></button>
                 </div>
                 {{ form_end(form) }}
             </div>
@@ -243,10 +257,11 @@
                 <h5>73260 Les Avanchers-Valmorel</h5>
             </div>
         </div>
-        <footer>
-            <h4>Copyright All Right Reserved 2018 <strong>Thibault JACQUET</strong></h4>
-        </footer>
     </div>
+    <footer>
+        <i class="fa-regular fa-copyright"></i><h4>Copyright All Right Reserved 2023 <strong>Thibault JACQUET</strong>
+        </h4>
+    </footer>
 {% endblock %}
 {% block javascripts %}
     {{ parent() }}
