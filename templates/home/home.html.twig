@@ -119,87 +119,90 @@
     </div>
     <div class="portfolio" id="portfolio">
         <h2>Portfolio</h2>
-        <h3>Quelques-unes de mes realisations</h3>
-        <div class="projects">
-            <div id="prev"><i class="fa-solid fa-chevron-left"></i></div>
-            <div class="achievements ">
-                <div class="project">
-                    <div class="illustration">
-                        <img src="{{ asset('img/screenshot_portfolio.PNG') }}" alt="cv">
-                        <div class="overlay" id="overlay">
-                            <p>Realisation d'une application portfolio avec Symfony</p>
-                            <p>Deployee avec NGINX</p>
+        <div class="portfolio-container">
+            <h3>Quelques-unes de mes realisations</h3>
+            <div class="projects">
+                <div id="prev"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="achievements ">
+                    <div class="project">
+                        <div class="illustration">
+                            <img src="{{ asset('img/screenshot_portfolio.PNG') }}" alt="cv">
+                            <div class="overlay" id="overlay">
+                                <p>Realisation d'une application portfolio avec Symfony</p>
+                                <p>Deployee avec NGINX</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="illustration">
+                            <img src="{{ asset('img/screenshot_cv1.PNG') }}" alt="cv">
+                            <div class="overlay" id="overlay">
+                                <p>Realisation d'un cv en ligne (page statique)</p>
+                                <p>HTML 5</p>
+                                <P>CSS 3</P>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project ">
+                        <div class="illustration">
+                            <img src="{{ asset('img/screenshot_events.PNG') }}" alt="cv">
+                            <div class="overlay" id="overlay">
+                                <p>Realisation d'une application de gestion d'evenements</p>
+                                <p>SYMFONY</p>
+                                <p>MYSQL</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project ">
+                        <div class="illustration">
+                            <img src="{{ asset('img/screenshot_encheres.PNG') }}" alt="cv">
+                            <div class="overlay" id="overlay">
+                                <p>Realisation d'une application d'encheres</p>
+                                <p>JAVA EE</p>
+                                <p>MARIA DB</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project ">
+                        <div class="illustration">
+                            <img src="{{ asset('img/screenshot_articles.PNG') }}" alt="cv">
+                            <div class="overlay" id="overlay">
+                                <p>Realisation d'une application de gestion d'article</p>
+                                <p>SYMFONY</p>
+                                <P>MYSQL</P>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project ">
+                        <div class="illustration">
+                            <img src="{{ asset('img/screenshot_gazette.PNG') }}" alt="cv">
+                            <div class="overlay" id="overlay">
+                                <p>Realisation d'une maquette de site de contenu educatif</p>
+                                <p>HTML 5</p>
+                                <p>CSS 3</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project ">
+                        <div class="illustration">
+                            <img src="{{ asset('img/screenshot_silex.PNG') }}" alt="cv">
+                            <div class="overlay" id="overlay">
+                                <p>Realisation d'une maquette de site vitrine</p>
+                                <p>HTML 5</p>
+                                <p>CSS 3</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="project">
-                    <div class="illustration">
-                        <img src="{{ asset('img/screenshot_cv1.PNG') }}" alt="cv">
-                        <div class="overlay" id="overlay">
-                            <p>Realisation d'un cv en ligne (page statique)</p>
-                            <p>HTML 5</p>
-                            <P>CSS 3</P>
-                        </div>
-                    </div>
-                </div>
-                <div class="project ">
-                    <div class="illustration">
-                        <img src="{{ asset('img/screenshot_events.PNG') }}" alt="cv">
-                        <div class="overlay" id="overlay">
-                            <p>Realisation d'une application de gestion d'evenements</p>
-                            <p>SYMFONY</p>
-                            <p>MYSQL</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project ">
-                    <div class="illustration">
-                        <img src="{{ asset('img/screenshot_encheres.PNG') }}" alt="cv">
-                        <div class="overlay" id="overlay">
-                            <p>Realisation d'une application d'encheres</p>
-                            <p>JAVA EE</p>
-                            <p>MARIA DB</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project ">
-                    <div class="illustration">
-                        <img src="{{ asset('img/screenshot_articles.PNG') }}" alt="cv">
-                        <div class="overlay" id="overlay">
-                            <p>Realisation d'une application de gestion d'article</p>
-                            <p>SYMFONY</p>
-                            <P>MYSQL</P>
-                        </div>
-                    </div>
-                </div>
-                <div class="project ">
-                    <div class="illustration">
-                        <img src="{{ asset('img/screenshot_gazette.PNG') }}" alt="cv">
-                        <div class="overlay" id="overlay">
-                            <p>Realisation d'une maquette de site de contenu educatif</p>
-                            <p>HTML 5</p>
-                            <p>CSS 3</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project ">
-                    <div class="illustration">
-                        <img src="{{ asset('img/screenshot_silex.PNG') }}" alt="cv">
-                        <div class="overlay" id="overlay">
-                            <p>Realisation d'une maquette de site vitrine</p>
-                            <p>HTML 5</p>
-                            <p>CSS 3</p>
-                        </div>
-                    </div>
-                </div>
+                <div id="next"><i class="fa-solid fa-chevron-right"></i></div>
             </div>
-            <div id="next"><i class="fa-solid fa-chevron-right"></i></div>
         </div>
     </div>
     <div class="contact" id="contact">
         <h2>Contact</h2>
         <div class="contact-container">
             <div class="form">
+                <h3>Formulaire de contact</h3>
                 {{ form_start(form) }}
                 <div class="form-row">
                     {{ form_label(form.name) }}
@@ -227,7 +230,6 @@
                 </div>
                 {{ form_errors(form.object) }}
                 <div class="msg">
-                    {{ form_label(form.message) }}
                     {{ form_widget(form.message) }}
                 </div>
                 {{ form_errors(form.message) }}
@@ -241,10 +243,10 @@
                 <h5>73260 Les Avanchers-Valmorel</h5>
             </div>
         </div>
-    </div>
-    <footer>
+        <footer>
 
-    </footer>
+        </footer>
+    </div>
 {% endblock %}
 {% block javascripts %}
     {{ parent() }}
@@ -257,7 +259,6 @@
         document.addEventListener('scroll', function () {
             let header = document.getElementsByClassName('header-content')[0];
             let profilePicture = document.getElementById('profile_picture');
-            console.log(header);
 
             if (window.scrollY > 50) {
                 profilePicture.style.display = 'none';
