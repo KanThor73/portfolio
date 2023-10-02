@@ -22,6 +22,7 @@ Encore
      */
     .addEntry('cv', './assets/cv_style.js')
     .addEntry('variables', './assets/variables.js')
+    .addEntry('emailContact', './assets/emailContact.js')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()

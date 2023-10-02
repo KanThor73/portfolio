@@ -1,0 +1,36 @@
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body);
+  padding: 2rem;
+}
+
+.container{
+  background-color: var(--primary);
+}
+
+h1,h2{
+  color: var(--secondary);
+  font-family: var(--body);
+}
+
+h1{
+  letter-spacing: 0.3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+  margin: 1rem;
+}
+
+p{
+  margin: 1rem;
+  text-align: justify;
+  color: var(--dark);
+  font-family: var(--body);
+
+}

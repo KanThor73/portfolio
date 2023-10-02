@@ -13,9 +13,9 @@
                 <div class="separator"></div>
                 <a href="#skills" onclick="scrollToSection('skills'); return false;"><h3>Skills</h3></a>
                 <div class="separator"></div>
-                <a href=""><h3>Portfolio</h3></a>
+                <a href="#portfolio" onclick="scrollToSection('portfolio'); return false;"><h3>Portfolio</h3></a>
                 <div class="separator"></div>
-                <a href=""><h3>Contact</h3></a>
+                <a href="#contact" onclick="scrollToSection('contact'); return false;"><h3>Contact</h3></a>
             </nav>
         </div>
     </header>
@@ -25,10 +25,10 @@
     </section>
     <div class="travel" id="travel">
         <h2>Mon parcours</h2>
+        <h3>Un parcours assez atypique mais riche en experiences !</h3>
         <div class="travel-container">
             <img src="{{ asset('img/travel_picture.jpg') }}" alt="travel_picture">
             <div class="text">
-                <p>Un parcours assez atypique mais riche en experiences !</p>
                 <p>Ma passion pour le sport, la résolution de problèmes et les technologies du numérique m'a menée en
                     licence
                     d’ergonomie. J'y ai découvert la motion capture et la programmation scientifique.</p>
@@ -95,38 +95,156 @@
                     <div class="dark-bar"></div>
                     <div class="dot"></div>
                 </div>
+                <h5>GITHUB</h5>
+                <div class="prog prog-55">
+                    <div class="dark-bar"></div>
+                    <div class="dot"></div>
+                </div>
+                <h4>DEVOPS</h4>
+                <h5>NGINX</h5>
+                <div class="prog prog-30">
+                    <div class="dark-bar"></div>
+                    <div class="dot"></div>
+                </div>
+                <h5>LINUX</h5>
+                <div class="prog prog-30">
+                    <div class="dark-bar"></div>
+                    <div class="dot"></div>
+                </div>
             </div>
             <div class="cv">
                 <img src="{{ asset('img/thibault_jacquet.png') }}" alt="cv">
             </div>
         </div>
     </div>
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
         <h2>Portfolio</h2>
-        <h3>Quelques projets personnels et realisations</h3>
-        <div class="achievements">
-            <div class="project">
-                <div class="illustration"></div>
-                <h5>Portfolio</h5>
+        <h3>Quelques-unes de mes realisations</h3>
+        <div class="projects">
+            <div id="prev"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="achievements ">
+                <div class="project">
+                    <div class="illustration">
+                        <img src="{{ asset('img/screenshot_portfolio.PNG') }}" alt="cv">
+                        <div class="overlay" id="overlay">
+                            <p>Realisation d'une application portfolio avec Symfony</p>
+                            <p>Deployee avec NGINX</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="illustration">
+                        <img src="{{ asset('img/screenshot_cv1.PNG') }}" alt="cv">
+                        <div class="overlay" id="overlay">
+                            <p>Realisation d'un cv en ligne (page statique)</p>
+                            <p>HTML 5</p>
+                            <P>CSS 3</P>
+                        </div>
+                    </div>
+                </div>
+                <div class="project ">
+                    <div class="illustration">
+                        <img src="{{ asset('img/screenshot_events.PNG') }}" alt="cv">
+                        <div class="overlay" id="overlay">
+                            <p>Realisation d'une application de gestion d'evenements</p>
+                            <p>SYMFONY</p>
+                            <p>MYSQL</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project ">
+                    <div class="illustration">
+                        <img src="{{ asset('img/screenshot_encheres.PNG') }}" alt="cv">
+                        <div class="overlay" id="overlay">
+                            <p>Realisation d'une application d'encheres</p>
+                            <p>JAVA EE</p>
+                            <p>MARIA DB</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project ">
+                    <div class="illustration">
+                        <img src="{{ asset('img/screenshot_articles.PNG') }}" alt="cv">
+                        <div class="overlay" id="overlay">
+                            <p>Realisation d'une application de gestion d'article</p>
+                            <p>SYMFONY</p>
+                            <P>MYSQL</P>
+                        </div>
+                    </div>
+                </div>
+                <div class="project ">
+                    <div class="illustration">
+                        <img src="{{ asset('img/screenshot_gazette.PNG') }}" alt="cv">
+                        <div class="overlay" id="overlay">
+                            <p>Realisation d'une maquette de site de contenu educatif</p>
+                            <p>HTML 5</p>
+                            <p>CSS 3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project ">
+                    <div class="illustration">
+                        <img src="{{ asset('img/screenshot_silex.PNG') }}" alt="cv">
+                        <div class="overlay" id="overlay">
+                            <p>Realisation d'une maquette de site vitrine</p>
+                            <p>HTML 5</p>
+                            <p>CSS 3</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="project">
-                <div class="illustration"></div>
-                <h5>Cv en ligne</h5>
+            <div id="next"><i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+    </div>
+    <div class="contact" id="contact">
+        <h2>Contact</h2>
+        <div class="contact-container">
+            <div class="form">
+                {{ form_start(form) }}
+                <div class="form-row">
+                    {{ form_label(form.name) }}
+                    {{ form_widget(form.name) }}
+                </div>
+                {{ form_errors(form.name) }}
+                <div class="form-row">
+                    {{ form_label(form.firstname) }}
+                    {{ form_widget(form.firstname) }}
+                </div>
+                {{ form_errors(form.firstname) }}
+                <div class="form-row">
+                    {{ form_label(form.email) }}
+                    {{ form_widget(form.email) }}
+                </div>
+                {{ form_errors(form.email) }}
+                <div class="form-row">
+                    {{ form_label(form.telephone) }}
+                    {{ form_widget(form.telephone) }}
+                </div>
+                {{ form_errors(form.telephone) }}
+                <div class="form-row">
+                    {{ form_label(form.object) }}
+                    {{ form_widget(form.object) }}
+                </div>
+                {{ form_errors(form.object) }}
+                <div class="msg">
+                    {{ form_label(form.message) }}
+                    {{ form_widget(form.message) }}
+                </div>
+                {{ form_errors(form.message) }}
+                <div class="btn">
+                    <button class="btn-primary" type="submit">Envoyer</button>
+                </div>
+                {{ form_end(form) }}
             </div>
-            <div class="project">
-                <div class="illustration"></div>
-                <h5>Projet evenement</h5>
-            </div>
-            <div class="project">
-                <div class="illustration"></div>
-                <h5>Projet enchere</h5>
-            </div>
-            <div class="project">
-                <div class="illustration"></div>
-                <h5>Projet article</h5>
+            <div class="data">
+                <h5>tjacquet53@gmail.com</h5>
+                <h5>73260 Les Avanchers-Valmorel</h5>
             </div>
         </div>
     </div>
+    <footer>
+
+    </footer>
 {% endblock %}
 {% block javascripts %}
     {{ parent() }}
@@ -149,5 +267,38 @@
                 header.style.justifyContent = 'space-between';
             }
         });
+
+        let projectContainer = document.querySelector('.achievements');
+        let projects = document.querySelectorAll('.project');
+        let currentIndex = 0;
+
+        projects[currentIndex].classList.add('active');
+
+        // Fonction pour passer au projet suivant
+        function nextProject() {
+            projects[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % projects.length;
+            projects[currentIndex].classList.add('active');
+            updateTransform();
+        }
+
+        // Fonction pour passer au projet précédent
+        function prevProject() {
+            projects[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+            projects[currentIndex].classList.add('active');
+            updateTransform();
+        }
+
+        // Fonction pour mettre à jour la transformation de projectContainer
+        function updateTransform() {
+            // let project = document.querySelector('.active');
+            // let transformValue = -currentIndex * 10 + 'rem';
+            // project.style.transform = 'translateX(' + transformValue + ')';
+        }
+
+        // Ajoutez des écouteurs d'événements pour les contrôles de carrousel
+        document.getElementById('prev').addEventListener('click', prevProject);
+        document.getElementById('next').addEventListener('click', nextProject);
     </script>
 {% endblock %}
