@@ -71,6 +71,19 @@ header {
   }
 }
 
+.flash_success {
+  margin-bottom: 3rem;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  color: var(--succes);
+  background: var(--succes-soft);
+  border: 3px solid var(--succes);
+  p{
+    padding: 1rem;
+  }
+}
+
 //show
 
 .show {
@@ -88,7 +101,7 @@ header {
   position: absolute;
   background: url("../img/mountains.svg") no-repeat;
   background-size: cover;
-  height: 15vh;
+  height: 20vh;
   width: 100%;
   left: 0;
   bottom: -3px;

@@ -18,8 +18,20 @@
                 <a href="#contact" onclick="scrollToSection('contact'); return false;"><h3>Contact</h3></a>
             </nav>
         </div>
+
     </header>
+    {#    {% for message in app.session.flashBag.get('success') %} #}
+    {#        <div class="flash_success"> #}
+    {#            {{ message }} #}
+    {#        </div> #}
+    {#    {% endfor %} #}
+
     <section class="show" id="show">
+        {% if form.vars.submitted and form.vars.valid %}
+            <div class="flash_success">
+                <p>Merci pour votre message, a tres vite !</p>
+            </div>
+        {% endif %}
         <h1>Thibault JACQUET</h1>
         <h2>DEVELOPPEUR WEB - WEB MOBILE</h2>
     </section>

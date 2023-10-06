@@ -21,7 +21,6 @@ class HomeController extends AbstractController
     public function index(Request $request, MailerInterface $mailer, Filesystem $filesystem): Response
     {
         $contactForm = $this->createForm(ContactType::class)->handleRequest($request);
-//        $this->$filesystem->mkdir('')
 
         if ($contactForm->isSubmitted() && $contactForm->isSubmitted()) {
 
@@ -53,6 +52,7 @@ class HomeController extends AbstractController
             $mailer->send($email);
 
             $this->addFlash('message', 'merci pour votre message, je vous reponds au plus vite !');
+            $this->redirectToRoute('home');
         }
 
         return $this->render('home/home.html.twig', [
